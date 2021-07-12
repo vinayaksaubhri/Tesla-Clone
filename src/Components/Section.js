@@ -5,7 +5,7 @@ function Section() {
   return (
     <Section__Wrap>
       <Section__Text>
-        <h1>Model S</h1>
+        <h1>Model 3</h1>
         <p>
           Order Online for <span>Touchless Delivery</span>
         </p>

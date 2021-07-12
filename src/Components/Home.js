@@ -19,6 +19,6 @@ const Container = styled.div`
   height: 100vh;
   scroll-snap-type: y mandatory;
 
-  overflow-y: auto;
+  overflow: auto;
   overflow-x: hidden;
 `;
