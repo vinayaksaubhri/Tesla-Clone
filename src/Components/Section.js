@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Section() {
+function Section({ title, description, underline_des, backgroundImg, leftBtnText, rightBtnText }) {
   return (
-    <Section__Wrap>
+    <Section__Wrap backgroundImg={backgroundImg}>
       <Section__Text>
-        <h1>Model 3</h1>
+        <h1>{title}</h1>
         <p>
-          Order Online for <span>Touchless Delivery</span>
+          {description}
+          <span>{underline_des}</span>
         </p>
       </Section__Text>
       <Section__Bottom>
         <Section__Button_Wrap>
-          <LeftButton>Custom Order</LeftButton>
-          <RightButton>Existing Inventory</RightButton>
+          <LeftButton>{leftBtnText}</LeftButton>
+          <RightButton>{rightBtnText}</RightButton>
         </Section__Button_Wrap>
         <Section__DownArrow src="/images/down-arrow.svg" />
       </Section__Bottom>
@@ -34,6 +35,7 @@ const Section__Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
   scroll-snap-align: start;
+  background-image: ${(props) => `url("/images/${props.backgroundImg}")`};
 `;
 const Section__Text = styled.div`
   padding-top: 15vh;
