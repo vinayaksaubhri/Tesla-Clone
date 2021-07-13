@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 function Header() {
+  const [menuState, setMenuState] = useState(false);
   return (
     <Header__Container>
       <a>
@@ -18,8 +19,28 @@ function Header() {
       <Header__Right_Menu>
         <a href="#">Shop</a>
         <a href="#">Account</a>
-        <a href="#">Menu</a>
+        <a href="#" onClick={() => setMenuState(true)}>
+          Menu
+        </a>
       </Header__Right_Menu>
+      <Header__Menu_Nav show={menuState}>
+        <img src="/images/cross.svg" onClick={() => setMenuState(false)} />
+        <li>
+          <a>Existing Inventory</a>
+        </li>
+        <li>
+          <a>Used Inventory</a>
+        </li>
+        <li>
+          <a>Trade-in</a>
+        </li>
+        <li>
+          <a>Cybertruck</a>
+        </li>
+        <li>
+          <a>Roadaster</a>
+        </li>
+      </Header__Menu_Nav>
     </Header__Container>
   );
 }
@@ -36,6 +57,10 @@ const Header__Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+  img {
+    height: 15px;
+  }
 `;
 const Header__Menu = styled.div`
   @media (max-width: 883px) {
@@ -54,4 +79,30 @@ const Header__Right_Menu = styled.div`
     padding: 0 10px;
     margin-right: 10px;
   }
+`;
+const Header__Menu_Nav = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  width: 300px;
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    a {
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  img {
+    height: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  display: ${(props) => (props.show ? 'flex' : 'none')};
 `;
