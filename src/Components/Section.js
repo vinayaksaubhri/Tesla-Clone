@@ -1,21 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 function Section({ title, description, underline_des, backgroundImg, leftBtnText, rightBtnText }) {
   return (
     <Section__Wrap backgroundImg={backgroundImg}>
-      <Section__Text>
-        <h1>{title}</h1>
-        <p>
-          {description}
-          <span>{underline_des}</span>
-        </p>
-      </Section__Text>
+      <Fade bottom>
+        <Section__Text>
+          <h1>{title}</h1>
+          <p>
+            {description}
+            <span>{underline_des}</span>
+          </p>
+        </Section__Text>
+      </Fade>
       <Section__Bottom>
-        <Section__Button_Wrap>
-          <LeftButton>{leftBtnText}</LeftButton>
-          <RightButton>{rightBtnText}</RightButton>
-        </Section__Button_Wrap>
+        <Fade bottom>
+          <Section__Button_Wrap>
+            <LeftButton>{leftBtnText}</LeftButton>
+            {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+          </Section__Button_Wrap>
+        </Fade>
         <Section__DownArrow src="/images/down-arrow.svg" />
       </Section__Bottom>
     </Section__Wrap>
@@ -48,6 +53,10 @@ const Section__Text = styled.div`
     font-weight: 300;
     span {
       text-decoration: underline;
+    }
+    span:hover {
+      cursor: pointer;
+      color: black;
     }
   }
 `;

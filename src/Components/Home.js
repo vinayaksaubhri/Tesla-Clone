@@ -53,6 +53,14 @@ function Home() {
         leftBtnText="Custom order"
         rightBtnText="Learn More"
       />
+      <Section
+        title="Accessories"
+        description=""
+        underline_des=""
+        backgroundImg="accessories.jpg"
+        leftBtnText="Shop Now"
+        rightBtnText=""
+      />
     </Container>
   );
 }
