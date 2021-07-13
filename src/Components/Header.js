@@ -19,9 +19,7 @@ function Header() {
       <Header__Right_Menu>
         <a href="#">Shop</a>
         <a href="#">Account</a>
-        <a href="#" onClick={() => setMenuState(true)}>
-          Menu
-        </a>
+        <a onClick={() => setMenuState(true)}>Menu</a>
       </Header__Right_Menu>
       <Header__Menu_Nav show={menuState}>
         <img src="/images/cross.svg" onClick={() => setMenuState(false)} />
@@ -104,5 +102,6 @@ const Header__Menu_Nav = styled.div`
     align-self: flex-end;
     cursor: pointer;
   }
-  display: ${(props) => (props.show ? 'flex' : 'none')};
+  transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.7s ease-in-out;
 `;
