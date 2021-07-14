@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
+import { useMediaQuery } from 'react-responsive';
 function Header() {
   const [menuState, setMenuState] = useState(false);
+  const isMobile = useMediaQuery({ query: '(max-width: 980px)' });
   return (
     <>
       <Header__Container>
@@ -35,11 +36,45 @@ function Header() {
             <a>Trade-in</a>
           </li>
           <li>
+            <a>Test Drive</a>
+          </li>
+          <li>
             <a>Cybertruck</a>
           </li>
           <li>
             <a>Roadaster</a>
           </li>
+          <li>
+            <a>Semi</a>
+          </li>
+          <li>
+            <a>Charging</a>
+          </li>
+          <li>
+            <a>Powerwall</a>
+          </li>
+          <li>
+            <a>Commercial Energy</a>
+          </li>
+          <li>
+            <a>Utilities</a>
+          </li>
+          <li>
+            <a>Find US</a>
+          </li>
+          <li>
+            <a>Support</a>
+          </li>
+          {isMobile && (
+            <>
+              <li>
+                <a>Shop</a>
+              </li>
+              <li>
+                <a>Account</a>
+              </li>
+            </>
+          )}
         </Header__Menu_Nav>
       </Header__Container>
     </>
@@ -70,14 +105,28 @@ const Header__Menu = styled.div`
   a {
     font-weight: 450;
     text-decoration: uppercase;
-    padding: 0 10px;
+    padding: 8px 10px;
+  }
+  a:hover {
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.05);
+    border-radius: 12px;
+
+    transition: background-color 0.33s ease, background-color 0.33s ease;
   }
 `;
 const Header__Right_Menu = styled.div`
   a {
     font-weight: 450;
     text-decoration: uppercase;
-    padding: 0 10px;
+    padding: 8px 10px;
+  }
+  a:hover {
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.05);
+    border-radius: 12px;
+
+    transition: background-color 0.33s ease, background-color 0.33s ease;
   }
 `;
 const Shop_Button = styled.a`
@@ -108,21 +157,34 @@ const Header__Menu_Nav = styled.div`
   background: white;
   width: 300px;
   list-style: none;
-  padding: 20px;
+  padding: 4px 32px;
   display: flex;
   flex-direction: column;
   li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 8px;
+    margin-bottom: 8px;
+
     a {
-      font-weight: 600;
+      font-weight: 450;
       cursor: pointer;
+      padding: 4px 8px;
     }
+  }
+  li:hover {
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.05);
+    border-radius: 12px;
+    transition: background-color 0.33s ease, background-color 0.33s ease;
   }
   img {
     height: 30px;
     align-self: flex-end;
     cursor: pointer;
+    margin: 24px 0px;
+  }
+  img:hover {
+    background-color: hsla(0, 0%, 0%, 0.05);
+    border-radius: 20px;
   }
   transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.7s ease-in-out;
