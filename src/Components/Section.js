@@ -81,6 +81,10 @@ const LeftButton = styled.div`
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    height: 40px;
+    width: 90vw;
+  }
 `;
 const RightButton = styled(LeftButton)`
   background-color: white;
@@ -91,6 +95,9 @@ const Section__DownArrow = styled.img`
   margin-bottom: 20px;
   height: 45px;
   animation: animateDown infinite 1.5s;
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+  }
 `;
 const Section__Bottom = styled.div`
   display: flex;
