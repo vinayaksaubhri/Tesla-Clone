@@ -42,7 +42,6 @@ function Header() {
           </li>
         </Header__Menu_Nav>
       </Header__Container>
-      {/* {menuState && <Header__Menu_Blur />} */}
     </>
   );
 }
@@ -99,7 +98,6 @@ const Menu_Button = styled(Shop_Button)`
 
     backdrop-filter: blur(16px);
     background-color: rgba(0, 0, 0, 0.05);
-    /* background: black; */
   }
 `;
 const Header__Menu_Nav = styled.div`
@@ -128,14 +126,4 @@ const Header__Menu_Nav = styled.div`
   }
   transform: ${(props) => (props.show ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.7s ease-in-out;
-`;
-const Header__Menu_Blur = styled.div`
-  height: 100vh;
-  width: 100vw;
-  z-index: 2;
-
-  opacity: 0.3;
-  background: rgba();
-
-  backdrop-filter: blur(5px);
 `;
