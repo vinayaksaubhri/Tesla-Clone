@@ -72,7 +72,7 @@ function Header() {
                 <a>Shop</a>
               </li>
               <li>
-                <a>Account</a>
+                <a href="/login">Account</a>
               </li>
             </>
           )}
