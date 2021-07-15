@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 function Header() {
   const [menuState, setMenuState] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 980px)' });
@@ -20,7 +21,7 @@ function Header() {
         </Header__Menu>
         <Header__Right_Menu>
           <Shop_Button>Shop</Shop_Button>
-          <Account_Button>Account</Account_Button>
+          <Account_Button to="/login">Account</Account_Button>
           <Menu_Button onClick={() => setMenuState(true)}>Menu</Menu_Button>
         </Header__Right_Menu>
 
@@ -129,7 +130,7 @@ const Header__Right_Menu = styled.div`
     transition: background-color 0.33s ease, background-color 0.33s ease;
   }
 `;
-const Shop_Button = styled.a`
+const Shop_Button = styled(Link)`
   @media (max-width: 980px) {
     display: none;
   }
