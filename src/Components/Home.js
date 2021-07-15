@@ -73,7 +73,7 @@ function Home() {
       )}
       <Container>
         <Section
-          title="Model P"
+          title="Model S"
           description="Order Online for "
           underline_des="Touchless Delivery"
           backgroundImg="model-s.jpg"
