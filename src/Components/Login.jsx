@@ -98,6 +98,7 @@ const Login__info = styled.div`
       font-weight: 450;
       font-size: 28px;
       margin-left: -10px;
+      margin-top: 8px;
       color: #171a20;
     }
   }
@@ -133,6 +134,9 @@ const Login__form = styled.form`
   #password {
     margin-bottom: 16px;
   }
+  @media (max-width: 980px) {
+    padding-top: 16px;
+  }
 `;
 const Login__helper = styled.p`
   text-align: center;
@@ -141,7 +145,7 @@ const Login__helper = styled.p`
   a {
     box-shadow: 0 1px 0 0 rgb(24, 27, 33);
     font-size: 13px;
-    color: rgb(56, 59, 64);
+    color: #393c41;
   }
   a:hover {
     transition: box-shadow 0.33s cubic-bezier(0.5, 0, 0, 0.75), color 0.33s ease;
@@ -155,7 +159,7 @@ const Login__helper = styled.p`
 const Login__divider = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 20px;
   align-items: center;
   hr {
     width: 40%;
