@@ -4,54 +4,56 @@ import styled from 'styled-components';
 import Primary_button from './Primary_button';
 import Secondary_button from './Secondary_button';
 
-function Login() {
+function Sign_up() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [fName, setFName] = useState('');
+  const [lName, setLName] = useState('');
+
   return (
-    <Login__Container>
-      <Login__header>
-        <Login__logo to="/">
+    <Sginup__container>
+      <Sginup__header>
+        <Sginup__logo to="/">
           <img src="/images/logo.svg" alt="tesla logo" />
-        </Login__logo>
-        <Login__language>
+        </Sginup__logo>
+        <Sginup__language>
           <img src="/images/golbal_icon.svg" alt="world icon" />
           <span>en-US</span>
-        </Login__language>
-      </Login__header>
-      <Login__info>
-        <h1>Sign In</h1>
-        <Login__form>
+        </Sginup__language>
+      </Sginup__header>
+      <Sginup__info>
+        <h1>Create Account</h1>
+        <Sginup__form>
+          <label htmlFor="fName">First Name</label>
+          <input id="fName" type="text" value={fName} onChange={(e) => setFName(e.target.value)} />
+          <label htmlFor="lName">Last Name</label>
+          <input id="lName" type="text" value={lName} onChange={(e) => setLName(e.target.value)} />
           <label htmlFor="email">Email Address</label>
           <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <label htmlFor="password">Password</label>
           <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <Primary_button name="Sign In" type="submit" />
-          <Login__helper>
-            <a>Forgot Email?</a>
-            <span>|</span>
-            <a>Forgot Password?</a>
-          </Login__helper>
-        </Login__form>
+          <Primary_button name="Create Account" type="submit" />
+        </Sginup__form>
         <Login__divider>
           <hr /> <span>OR</span> <hr />
         </Login__divider>
-        <Link to="/signup">
-          <Secondary_button name="Create Account" type="submit" />
+        <Link to="/login">
+          <Secondary_button name="Sign in" type="submit" />
         </Link>
-      </Login__info>
-    </Login__Container>
+      </Sginup__info>
+    </Sginup__container>
   );
 }
 
-export default Login;
+export default Sign_up;
 
-const Login__Container = styled.div`
+const Sginup__container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
 `;
-const Login__header = styled.div`
+const Sginup__header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -59,14 +61,14 @@ const Login__header = styled.div`
   top: 0;
   align-items: center;
 `;
-const Login__logo = styled(Link)`
+const Sginup__logo = styled(Link)`
   img {
     object-fit: contain;
     height: 12.5px;
   }
   padding: 16px;
 `;
-const Login__language = styled.div`
+const Sginup__language = styled.div`
   display: flex;
   align-items: center;
   gap: 6px;
@@ -81,7 +83,7 @@ const Login__language = styled.div`
     border-radius: 18px;
   }
 `;
-const Login__info = styled.div`
+const Sginup__info = styled.div`
   display: flex;
   flex-direction: column;
   /* justify-content: flex-end; */
@@ -92,7 +94,7 @@ const Login__info = styled.div`
   h1 {
     font-weight: 450;
     font-size: 40px;
-    margin-left: -10px;
+    margin-left: -80px;
     color: #171a20;
   }
   @media (max-width: 980px) {
@@ -105,7 +107,7 @@ const Login__info = styled.div`
     }
   }
 `;
-const Login__form = styled.form`
+const Sginup__form = styled.form`
   display: flex;
   flex-direction: column;
 
@@ -115,10 +117,11 @@ const Login__form = styled.form`
     font-size: 15px;
     padding-left: 20px;
     padding-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   input {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 
     background-color: #f4f4f4;
     border: 1px solid #f4f4f4;
@@ -134,13 +137,13 @@ const Login__form = styled.form`
   }
 
   #password {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
   }
   @media (max-width: 980px) {
     padding-top: 16px;
   }
 `;
-const Login__helper = styled.p`
+const Sginup__helper = styled.p`
   text-align: center;
   font-weight: 400;
   font-size: 14px;
