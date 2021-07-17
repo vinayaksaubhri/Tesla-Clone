@@ -1,12 +1,34 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import Primary_button from './Primary_button';
 import Secondary_button from './Secondary_button';
+import { auth } from '../firebase';
+import { useDispatch } from 'react-redux';
+import { login } from '../features/userSlice';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const signIn = (e) => {
+    e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        dispatch(
+          login({
+            email: userAuth.user.email,
+            uid: userAuth.user.uid,
+            displayName: userAuth.user.displayName,
+          }),
+        );
+        history.push('/dashboard');
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <Login__Container>
       <Login__header>
@@ -25,7 +47,7 @@ function Login() {
           <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <label htmlFor="password">Password</label>
           <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <Primary_button name="Sign In" type="submit" />
+          <Primary_button name="Sign In" type="submit" onClick={signIn} />
           <Login__helper>
             <a>Forgot Email?</a>
             <span>|</span>
@@ -36,7 +58,7 @@ function Login() {
           <hr /> <span>OR</span> <hr />
         </Login__divider>
         <Link to="/signup">
-          <Secondary_button name="Create Account" type="submit" />
+          <Secondary_button name="Create Account" />
         </Link>
       </Login__info>
     </Login__Container>

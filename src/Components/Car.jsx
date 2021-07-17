@@ -34,6 +34,11 @@ const Car__img = styled.div`
     object-fit: contain;
     width: 1000px;
   }
+  @media (max-width: 980px) {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
 `;
 const Car__model = styled.h2`
   font-weight: 450;

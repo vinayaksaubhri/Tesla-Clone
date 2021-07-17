@@ -1,20 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { auth } from '../firebase';
 import Car from './Car';
 import Header from './Header';
+import { logout, selectUser } from '../features/userSlice';
 
 function Dashboard() {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const logoutOfApp = () => {
+    auth
+      .signOut()
+      .then(() => {
+        dispatch(logout());
+        history.push('/');
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <>
       <Header />
       <Dashboard__info>
-        <Dashboard__person>vinayak's Tesla</Dashboard__person>
+        <Dashboard__person>{user?.displayName + "'s"} Tesla</Dashboard__person>
         <Dashboard__info_right>
           <Link>Home</Link>
           <Link>Charging</Link>
           <Link>Settings</Link>
-          <Link>Sign out</Link>
+          <Link onClick={logoutOfApp}>Sign out</Link>
         </Dashboard__info_right>
       </Dashboard__info>
 
