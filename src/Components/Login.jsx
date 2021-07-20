@@ -12,9 +12,9 @@ function Login() {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();
+
   const signIn = (e) => {
     e.preventDefault();
-
     auth
       .signInWithEmailAndPassword(email, password)
       .then((userAuth) => {

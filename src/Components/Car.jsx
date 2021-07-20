@@ -30,14 +30,16 @@ const Car__container = styled.div`
   border-top: 1px solid #d0d1d2;
 `;
 const Car__img = styled.div`
+  display: flex;
   img {
     object-fit: contain;
     width: 1000px;
   }
   @media (max-width: 980px) {
-    max-width: 100%;
-    display: block;
-    height: auto;
+    img {
+      margin: auto;
+      width: 90%;
+    }
   }
 `;
 const Car__model = styled.h2`
@@ -45,6 +47,9 @@ const Car__model = styled.h2`
   font-size: xx-large;
   margin-top: -150px;
   text-transform: capitalize;
+  @media (max-width: 980px) {
+    margin-top: -50px;
+  }
 `;
 const Car__action = styled.div`
   display: flex;
@@ -54,6 +59,9 @@ const Car__action = styled.div`
   button {
     width: 230px;
     margin-bottom: 30px;
+  }
+  @media (max-width: 980px) {
+    flex-direction: column;
   }
 `;
 const Car__info = styled.p`

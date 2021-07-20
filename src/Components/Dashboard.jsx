@@ -51,21 +51,18 @@ function Dashboard() {
 
 export default Dashboard;
 
-const Dashboard__container = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
 const Dashboard__info = styled.div`
   display: flex;
   justify-content: space-between;
-
   width: 100vw;
-  padding: 60px 190px;
-  padding-bottom: 30px;
-  margin-top: 30px;
-  @media (max-width: 1200px) {
-    padding: 60px 60px;
-    /* justify-content: center; */
+  padding: 45px;
+  margin-top: 60px;
+  @media (max-width: 980px) {
+    border: 1px solid #d0d1d2;
+    padding: 30px;
+    margin: 60px auto;
+    width: 90vw;
+    border-radius: 10px;
   }
 `;
 const Dashboard__person = styled.div`
@@ -79,18 +76,24 @@ const Dashboard__person = styled.div`
 `;
 const Dashboard__info_right = styled.div`
   display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
   gap: 20px;
   a:hover {
     color: black;
     font-weight: 450;
   }
   @media (max-width: 980px) {
+    width: 80vw;
+    margin: auto;
+    padding: 0px 10px;
   }
 `;
 
 const Dashboard__car_container = styled.div`
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 30px;
   padding-bottom: 40px;
 `;
