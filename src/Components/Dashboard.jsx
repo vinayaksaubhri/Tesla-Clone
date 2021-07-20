@@ -88,6 +88,9 @@ const Dashboard__info_right = styled.div`
     margin: auto;
     padding: 0px 10px;
   }
+  a {
+    font-size: 14px;
+  }
 `;
 
 const Dashboard__car_container = styled.div`
