@@ -1,44 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<p align="center">
+  <img src="public\images\transparentBanner.png" width="50%"/>
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+<div align="center" style="margin: 20px; text-align: center">
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p align="center">
+  <a href="#project-star2">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#techs-rocket">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#installation-wrench">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#start-on">Start</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+</p>
 
-### `npm test`
+##
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <img src="public\images\banner.png"/>
+</p>
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project 🌟
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This repo contains an UI clone from Tesla homepage as well as Login and SignUp page .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+Deployed [here](tesla-clone-4f8b3.firebaseapp.com/).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="center">
+  <img src="public\images\tesla-1.gif"/>
+</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="center">
+  <img src="public\images\tesla-2.gif"/>
+</p>
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Techs 🚀
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [✔] [ReactJS](https://reactjs.org)
+- [✔] [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [✔] [Redux](https://redux.js.org/)
+- [✔] [Styled Components](https://styled-components.com/)
+- [✔] [React Reveal](https://www.react-reveal.com/)
+
+<br>
+
+## Installation 🔧
+
+First you need to clone the project using `git clone https://github.com/vinayaksaubhri/Tesla-Clone.git`.
+
+You can install the application using `npm install` or `yarn install` on the root dir.
+
+<br>
+
+## Start 🔛
+
+To start the application interface just run `npm start` or `yarn start` on the root dir.
+
+<br>
