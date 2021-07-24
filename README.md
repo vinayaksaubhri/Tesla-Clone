@@ -50,11 +50,11 @@ Deployed [here](tesla-clone-4f8b3.firebaseapp.com/).
 
 ## Techs 🚀
 
-- [✔] [ReactJS](https://reactjs.org)
-- [✔] [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [✔] [Redux](https://redux.js.org/)
-- [✔] [Styled Components](https://styled-components.com/)
-- [✔] [React Reveal](https://www.react-reveal.com/)
+[✔] [ReactJS](https://reactjs.org)
+[✔] [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[✔] [Redux](https://redux.js.org/)
+[✔] [Styled Components](https://styled-components.com/)
+[✔] [React Reveal](https://www.react-reveal.com/)
 
 <br>
 
