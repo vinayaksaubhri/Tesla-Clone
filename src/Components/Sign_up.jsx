@@ -90,7 +90,7 @@ const Sginup__container = styled.div`
   overflow-y: scroll;
   
   @media (max-width: 980px) {
-   margin-bottom: 50px;
+   /* margin-bottom: 50px; */
 `;
 const Sginup__header = styled.div`
   display: flex;
